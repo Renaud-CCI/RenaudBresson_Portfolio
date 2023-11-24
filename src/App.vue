@@ -15,6 +15,10 @@ import TheWelcome from './components/TheWelcome.vue'
   <main>
     <TheWelcome />
   </main>
+
+  <div>
+    <p class="text-orange-600 text-3xl">TEST</p>
+  </div>
 </template>
 
 <style scoped>
