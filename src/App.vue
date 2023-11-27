@@ -24,7 +24,7 @@
             :key="item"
             :value="item"
           >
-            {{ item }}
+            {{ translations[item] }}
           </v-tab>
         </v-tabs>
       </template>
@@ -53,12 +53,15 @@ import { store } from './stores/store';
       return {
         tab: null,
         items: [
-          'web', 'shopping', 'videos', 'images', 'news',
+          'about', 'skills', 'projects', 'contacts',
         ],
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
       }
     },
     computed: {
+      translations() {
+      return this.$i18n.messages[this.$i18n.locale].toolbar;
+      },
       primaryColor() {
         return store.primaryColor;
       },
@@ -70,7 +73,7 @@ import { store } from './stores/store';
       }
     },
     mounted() {
-        console.log(store);
+        console.log(this.$i18n.messages[this.$i18n.locale].toolbar);
         document.documentElement.style.setProperty('--primary-color', store.primaryColor);
         document.documentElement.style.setProperty('--secondary-color', store.secondaryColor);
     },
