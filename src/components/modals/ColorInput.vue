@@ -50,6 +50,7 @@ export default {
   },
   mounted() {
     this.updateColor();
+    console.log(Object.keys(this.$i18n.messages));
   },
   methods: {
     updateColor() {

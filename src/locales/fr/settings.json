@@ -1,9 +1,13 @@
 {
   "close": "Fermer",
+  "description": "Modifiez les paramètres de l'application :",
   "primary": {
     "title": "Choisissez une nouvelle couleur primaire :"
   },
   "secondary": {
     "title": "Choisissez une nouvelle couleur secondaire :"
+  },
+  "language": {
+    "title": "Choisissez une nouvelle langue :"
   }
 }

@@ -19,13 +19,23 @@
       </div>
     </div>
 
-    <ColorInput
-      :role="'primary'"
-    />
+    <div class="flex flex-col justify-center items-center w-full h-5/6">
+    
+      <h2 class="text-4xl mb-12">{{ translations.description }}</h2>
 
-    <ColorInput
-      :role="'secondary'"
-    />
+      <div class="w-full">
+        <ColorInput :role="'primary'" />
+      </div>
+
+      <div class="w-full">
+        <ColorInput :role="'secondary'" />
+      </div>
+
+      <div class="w-full">
+        <LanguageInput />
+      </div>
+
+    </div>
 
   </div>
 
@@ -41,11 +51,13 @@
 import { gsap } from "gsap";
 import { store } from '@/stores/store';
 import ColorInput from "@/components/modals/ColorInput.vue";
+import LanguageInput from "@/components/modals/LanguageInput.vue";
 
 export default {
   name: 'SettingsComponent',
   components: {
     'ColorInput': ColorInput,
+    'LanguageInput': LanguageInput,
   },
   props: {
     

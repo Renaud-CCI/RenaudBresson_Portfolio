@@ -1,3 +1,13 @@
 {
-  "close": "Close"
+  "close": "Close",
+  "description": "Edit application settings :",
+  "primary": {
+    "title": "Choose a new primary color:"
+  },
+  "secondary": {
+    "title": "Choose a new secondary color:"
+  },
+  "language": {
+    "title": "Choose a new language:"
+  }
 }
