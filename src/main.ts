@@ -1,10 +1,10 @@
+
 import './assets/main.css'
 
+import App from './App.vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import App from './App.vue'
 import { createI18n } from 'vue-i18n'
-import { store } from './stores/store'
 
 // Vuetify
 import 'vuetify/styles'
@@ -16,6 +16,7 @@ const vuetify = createVuetify({
   components,
   directives,
 })
+
 
 // i18n
 import { languages, defaultLocale } from './locales/index.js';

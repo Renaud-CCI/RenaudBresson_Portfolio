@@ -1,28 +1,31 @@
 <template>
     <v-card>
-    <v-toolbar :color="secondaryColor">
+    <v-toolbar :color="secondaryColor" density="comfortable">
 
-      <v-toolbar-title :style="{ color: primaryColor }">Your Dashboard</v-toolbar-title>
+      <photo-profile :image="photoProfileImg" :borderColor="primaryColor"></photo-profile>
+
+      <v-toolbar-title :style="{ color: primaryColor }">Renaud Bresson</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
       <v-btn icon  :color="primaryColor">
-        <v-icon :color="primaryColor">mdi-cog</v-icon>
+        <v-icon size="x-large" :color="primaryColor">mdi-cog</v-icon>
       </v-btn>
 
       <template v-slot:extension>
         <v-tabs
+          v-model="tab"
           :style="{ color: lightenPrimaryColor }"
           :color="primaryColor"
           :bg-color="secondaryColor"
           :slider-color="primaryColor"
-          v-model="tab"
-          align-tabs="title"
+          align-tabs="center"
         >
           <v-tab
             v-for="item in items"
             :key="item"
             :value="item"
+            @click="updateToolbarHeight"
           >
             {{ translations[item] }}
           </v-tab>
@@ -45,12 +48,18 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
+import { onMounted, onUpdated } from 'vue';
 import { store } from './stores/store';
+import PhotoProfile from './components/PhotoProfile.vue';
+import photoProfileImg from './assets/initiale.png';
 
   export default {
+    components: {
+      'photo-profile': PhotoProfile,
+    },
     data () {
       return {
+        photoProfileImg: photoProfileImg,
         tab: null,
         items: [
           'about', 'skills', 'projects', 'contacts',
@@ -73,9 +82,7 @@ import { store } from './stores/store';
       }
     },
     mounted() {
-        console.log(this.$i18n.messages[this.$i18n.locale].toolbar);
-        document.documentElement.style.setProperty('--primary-color', store.primaryColor);
-        document.documentElement.style.setProperty('--secondary-color', store.secondaryColor);
+      this.updateToolbarHeight();
     },
     methods: {
       /**
@@ -96,7 +103,54 @@ import { store } from './stores/store';
       b > 255 && (b = 255);
       b < 0 && (b = 0);
       return `#${(g | (b << 8) | (r << 16)).toString(16)}`;
+      },
+
+      updateToolbarHeight() {
+        this.$nextTick(() => {
+          const toolbar = document.querySelector('.v-toolbar__content');
+          toolbar.style.height = '80px';
+        });
       }
     }
   }
 </script>
+
+<style scoped lang="scss">
+@import "./assets/variables.scss";
+
+.profile-img{
+  width: 4rem;
+  height: 4rem;
+  margin: 2.5rem 0.5rem 2rem 4rem;
+}
+
+.v-toolbar-title{
+  margin-top: 0.9rem;
+  line-height: 4rem;
+  font-family: $primary-font-family-bold;
+  font-size: 3.5rem;
+  font-weight: 700;
+
+  .v-toolbar-title__placeholder{
+    margin-top: 2rem;
+  }
+}
+
+.mdi-cog{
+  margin-top: 0.5rem;
+  padding-right: 1rem;
+  font-size:3rem;
+}
+
+.v-tabs {
+  width:100%;
+
+  .v-tab{
+    width: 12vw;
+    padding: auto;
+    font-size: 1.1rem;
+  }
+}
+
+
+</style>
