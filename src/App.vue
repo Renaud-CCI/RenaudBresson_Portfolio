@@ -8,8 +8,9 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon  :color="primaryColor">
-        <v-icon size="x-large" :color="primaryColor">mdi-cog</v-icon>
+      <v-btn icon ref="settingsButton" :color="primaryColor">
+        <v-icon size="x-large" ref="settingsButtonIcon" :color="primaryColor">mdi-cog</v-icon>
+        <v-tooltip activator="parent" location="bottom">{{ translations.settings }}</v-tooltip>
       </v-btn>
 
       <template v-slot:extension>
@@ -48,7 +49,7 @@
 </template>
 
 <script>
-import { onMounted, onUpdated } from 'vue';
+import { gsap } from 'gsap';
 import { store } from './stores/store';
 import PhotoProfile from './components/PhotoProfile.vue';
 import photoProfileImg from './assets/initiale.png';
@@ -83,6 +84,7 @@ import photoProfileImg from './assets/initiale.png';
     },
     mounted() {
       this.updateToolbarHeight();
+      this.settingAnimations();
     },
     methods: {
       /**
@@ -109,6 +111,35 @@ import photoProfileImg from './assets/initiale.png';
         this.$nextTick(() => {
           const toolbar = document.querySelector('.v-toolbar__content');
           toolbar.style.height = '80px';
+          setTimeout(() => {
+            toolbar.style.height = '80px';
+          }, 200);
+        });
+      },
+
+      //ANIMATIONS
+      settingAnimations() {
+        this.settingsButtonAnimation();
+      },
+      settingsButtonAnimation() {
+        const settingsButton = this.$refs.settingsButtonIcon.$el;
+        
+        settingsButton.addEventListener('mouseenter', () => {
+          gsap.to(settingsButton, {
+            rotation: 280,
+            scale: 1.5,
+            ease: "bounce.out",
+            duration: 1,
+            transformOrigin: "34% 47%",
+          });
+        });
+        settingsButton.addEventListener('mouseleave', () => {
+          gsap.to(settingsButton, {
+            rotation: -360,
+            scale: 1,
+            ease: "bounce.out",
+            duration: 0.5,
+          });
         });
       }
     }
@@ -125,11 +156,10 @@ import photoProfileImg from './assets/initiale.png';
 }
 
 .v-toolbar-title{
-  margin-top: 0.9rem;
+  margin-top: 0.5rem;
   line-height: 4rem;
   font-family: $primary-font-family-bold;
   font-size: 3.5rem;
-  font-weight: 700;
 
   .v-toolbar-title__placeholder{
     margin-top: 2rem;
@@ -140,15 +170,24 @@ import photoProfileImg from './assets/initiale.png';
   margin-top: 0.5rem;
   padding-right: 1rem;
   font-size:3rem;
+
+  .settings-toolkit{
+    background-color: red,
+  }
 }
 
 .v-tabs {
   width:100%;
 
   .v-tab{
-    width: 12vw;
+    width: 10vw;
     padding: auto;
+    margin: 0 1rem;
     font-size: 1.1rem;
+    transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.02);
+      }
   }
 }
 
