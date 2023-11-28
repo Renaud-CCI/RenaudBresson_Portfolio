@@ -8,10 +8,20 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn icon ref="settingsButton" :color="primaryColor">
+      <v-btn 
+        icon 
+        ref="settingsButton" 
+        :color="primaryColor" 
+        @click="toggleShowSettings()"
+      >
         <v-icon size="x-large" ref="settingsButtonIcon" :color="primaryColor">mdi-cog</v-icon>
         <v-tooltip activator="parent" location="bottom">{{ translations.settings }}</v-tooltip>
       </v-btn>
+
+      <SettingsComponent 
+        v-if="showSettings"       
+        @close="toggleShowSettings()"
+        />
 
       <template v-slot:extension>
         <v-tabs
@@ -51,15 +61,22 @@
 <script>
 import { gsap } from 'gsap';
 import { store } from './stores/store';
-import PhotoProfile from './components/PhotoProfile.vue';
+
+//Assets
 import photoProfileImg from './assets/initiale.png';
+
+//Components
+import PhotoProfile from './components/PhotoProfile.vue';
+import SettingsComponent from './components/modals/SettingsComponent.vue';
 
   export default {
     components: {
       'photo-profile': PhotoProfile,
+      'SettingsComponent': SettingsComponent,
     },
     data () {
       return {
+        showSettings: false,
         photoProfileImg: photoProfileImg,
         tab: null,
         items: [
@@ -115,6 +132,11 @@ import photoProfileImg from './assets/initiale.png';
             toolbar.style.height = '80px';
           }, 200);
         });
+      },
+
+      toggleShowSettings() {
+        this.showSettings = !this.showSettings;
+        this.updateToolbarHeight();
       },
 
       //ANIMATIONS

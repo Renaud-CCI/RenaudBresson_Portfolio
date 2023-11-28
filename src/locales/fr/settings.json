@@ -1,0 +1,9 @@
+{
+  "close": "Fermer",
+  "primary": {
+    "title": "Choisissez une nouvelle couleur primaire :"
+  },
+  "secondary": {
+    "title": "Choisissez une nouvelle couleur secondaire :"
+  }
+}
