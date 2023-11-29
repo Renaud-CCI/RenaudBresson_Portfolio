@@ -4,7 +4,7 @@
 
       <photo-profile :image="photoProfileImg" :borderColor="primaryColor"></photo-profile>
 
-      <v-toolbar-title :style="{ color: primaryColor }">Renaud Bresson</v-toolbar-title>
+      <v-toolbar-title :style="{ color: primaryColor, fontWeight: 'bold' }">Renaud Bresson</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -51,7 +51,7 @@
         :value="item"
       >
         <v-card flat>
-          <v-card-text v-text="text"></v-card-text>
+          <component :is="getComponentForItem(item)"></component>
         </v-card>
       </v-window-item>
     </v-window>
@@ -68,14 +68,23 @@ import photoProfileImg from './assets/initiale.png';
 //Components
 import PhotoProfile from './components/PhotoProfile.vue';
 import SettingsComponent from './components/modals/SettingsComponent.vue';
+import AboutContainer from './components/about/AboutContainer.vue';
+import SkillsContainer from './components/skills/SkillsContainer.vue';
+import ProjectsContainer from './components/projects/ProjectsContainer.vue';
+import ContactsContainer from './components/contacts/ContactsContainer.vue';
 
   export default {
     components: {
       'photo-profile': PhotoProfile,
       'SettingsComponent': SettingsComponent,
+      'AboutContainer': AboutContainer,
+      'SkillsContainer': SkillsContainer,
+      'ProjectsContainer': ProjectsContainer,
+      'ContactsContainer': ContactsContainer,
     },
     data () {
       return {
+        fontFamilyBold: "'Nunito', sans-serif",
         showSettings: false,
         photoProfileImg: photoProfileImg,
         tab: null,
@@ -128,8 +137,10 @@ import SettingsComponent from './components/modals/SettingsComponent.vue';
         this.$nextTick(() => {
           const toolbar = document.querySelector('.v-toolbar__content');
           toolbar.style.height = '80px';
+          toolbar.style.fontFamily = this.fontFamilyBold;
           setTimeout(() => {
             toolbar.style.height = '80px';
+            toolbar.style.fontFamily = this.fontFamilyBold;
           }, 200);
         });
       },
@@ -137,6 +148,16 @@ import SettingsComponent from './components/modals/SettingsComponent.vue';
       toggleShowSettings() {
         this.showSettings = !this.showSettings;
         this.updateToolbarHeight();
+      },
+
+      getComponentForItem(item) {
+        switch (item) {
+          case 'about': return 'AboutContainer';
+          case 'skills': return 'SkillsContainer';
+          case 'projects': return 'ProjectsContainer';
+          case 'contacts': return 'ContactsContainer';
+          default: return 'AboutContainer';
+        }
       },
 
       //ANIMATIONS
@@ -211,6 +232,10 @@ import SettingsComponent from './components/modals/SettingsComponent.vue';
         transform: scale(1.02);
       }
   }
+}
+
+.v-card{
+  box-shadow: none;
 }
 
 
