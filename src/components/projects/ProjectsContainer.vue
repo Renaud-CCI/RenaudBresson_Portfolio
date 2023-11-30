@@ -43,7 +43,9 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/variables.scss";
-
+.projects-container{
+  min-height:80vh;
+}
 
 </style>
      

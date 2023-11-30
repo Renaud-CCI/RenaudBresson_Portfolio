@@ -43,7 +43,8 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/variables.scss";
-
-
+.contacts-container{
+  min-height:80vh;
+}
 </style>
      

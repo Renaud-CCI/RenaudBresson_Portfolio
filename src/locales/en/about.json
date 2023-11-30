@@ -1,0 +1,24 @@
+{
+  "lastname": "Lastname",
+  "firstname": "Firstname",
+  "birthdate": "Birthdate",
+  "particularity": 
+  {
+    "title": "Special features",
+    "content1": "Strong Nîmes accent",
+    "content2": "Moves with crutches",
+    "content3": "Approximate sense of humor"
+  },
+  "biography": 
+  {
+    "firstP": "In the process of professional reconversion following the occurrence of a disability, my investigative profile and penchant for problem-solving have led me to venture into the field of web development.",
+    "secondP": "I have recently graduated from a Professional Training in Web Development (level 5) obtained at the CCI of Roanne with Garage404, and I would like to continue my learning by obtaining a diploma in Application Design and Development (level 6) through an apprenticeship.",
+    "thirdP": "I am, therefore, open to any proposal that would allow me to contribute my value to a company while evolving alongside it to continue gaining experience and applying my knowledge."
+  }
+}
+  
+  
+  
+  
+  
+  
