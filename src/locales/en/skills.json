@@ -1,0 +1,20 @@
+{
+  "container": {
+    "title": "Assessing one's own skills can sometimes be a delicate exercise, so why not do it with a touch of humor? Here's my personal version :",
+    "subtitle": "You can change the proposed colors in the color palette by clicking on them. Then click on the logo of your choice to discover the skills I associate with each level!"
+  },
+  "card": {
+    "firstScale": {
+      "title": "Good coder",
+      "description": "You probably know the difference between a good coder and a bad coder..."
+    },
+    "secondScale": {
+      "title": "Good coder with a cup of coffee",
+      "description": "Because coffee is the ultimate fuel for any passionate programmer !"
+    },
+    "thirdScale": {
+      "title": "Good coder with a cup of coffee and a hoodie",
+      "description": "Because a casual style and technical skills go hand in hand."
+    }
+  }
+}

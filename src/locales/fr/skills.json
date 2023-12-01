@@ -1,0 +1,21 @@
+{
+  "container": {
+    "title": "Évaluer ses propres compétences peut parfois être un exercice délicat, alors pourquoi ne pas le faire avec une touche d'humour ? Voici ma version personnelle :",
+    "subtitle": "Vous pouvez changer les couleurs proposées dans le nuancier en cliquant dessus. Cliquez ensuite sur le logo de votre choix pour découvrir les compétences que j'associe à chaque niveau !"
+  },
+  "card": {
+    "firstScale": {
+      "title": "Bon codeur",
+      "description": "Vous connaissez surement la différence entre un bon codeur et un mauvais codeur..."
+    },
+    "secondScale": {
+      "title": "Bon codeur avec une tasse de café",
+      "description": "Parce que le café est le carburant ultime de tout programmeur passionné !"
+    },
+    "thirdScale": {
+      "title": "Bon codeur avec une tasse de café et un sweat-capuche",
+      "description": "Parce que le style décontracté et les compétences techniques vont de pair"
+    }
+  }
+  
+}

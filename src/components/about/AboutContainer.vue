@@ -97,7 +97,7 @@ export default {
   .biography-container{
     font-family: $pixelized-font-family;
     text-align: justify;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
