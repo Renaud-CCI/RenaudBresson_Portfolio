@@ -14,6 +14,7 @@
 <script>
 import { store } from '@/stores/store';
 import { gsap } from "gsap";
+import { EventBus } from '@/event-bus';
 import Symfony from '@/assets/images/lang_logos/Symfony.png';
 import Laravel from '@/assets/images/lang_logos/Laravel.png';
 import VueJS from '@/assets/images/lang_logos/VueJS.png';
@@ -102,8 +103,16 @@ export default {
   },
   mounted() {
     this.$el.style.setProperty('--primary-color', store.primaryColor);
+    EventBus.on('skillColorChanged', this.colorChanged);
+  },
+  beforeUnmount() {
+    EventBus.off('skillColorChanged', this.colorChanged);
   },
   methods: {
+    colorChanged() {
+      this.colorOfTheBackground = this.colorOfTheBackground != null ? store[this.scale] : null;
+      this.$el.style.backgroundColor = this.colorOfTheBackground;
+    },
     toggleBackground() {
       this.colorOfTheBackground = this.colorOfTheBackground == null ? store[this.scale] : null;
       let randomNumber = Math.floor(Math.random() * 8) + 1;

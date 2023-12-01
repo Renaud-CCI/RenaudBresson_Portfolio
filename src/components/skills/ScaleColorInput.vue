@@ -17,6 +17,7 @@
   
 <script>
 import { store } from '@/stores/store';
+import { EventBus } from '@/event-bus';
 
 export default {
   name: 'ScaleColorInput',
@@ -53,12 +54,9 @@ export default {
   },
   methods: {
     updateColor() {
-      console.log(this.role.toString());
-      console.log(store);
       switch (this.role) {
         case 'firstScale':
           this.color = this.firstScale;
-          console.log(this.color);
           break;
         case 'secondScale':
           this.color = this.secondScale;
@@ -82,6 +80,7 @@ export default {
           store.thirdScale = this.color;
           break;
       }
+      EventBus.emit('skillColorChanged');
     },
   },
 };
