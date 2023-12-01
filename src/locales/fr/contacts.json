@@ -1,0 +1,17 @@
+{
+  "title": {
+    "part1": "Trouvez l'intégralité de mes coordonnées en ",
+    "part2": "téléchargeant mon CV ",
+    "part3": "ou trouvez-moi sur ces réseaux :"
+  },
+  "linked-in-tag": "Profil LinkedIn",
+  "github-tag": "Profil Github",
+  "subtitle": "Ou envoyez-moi un mail !",
+  "name": "Nom complet",
+  "name-placeholder": "Entrez votre nom complet",
+  "email": "Adresse e-mail",
+  "email-placeholder": "email@domaine.tld",
+  "message": "Message",
+  "message-placeholder": "Entrez votre message",
+  "submit": "Envoyer"
+}

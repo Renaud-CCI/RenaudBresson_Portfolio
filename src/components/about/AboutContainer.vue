@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <div class="biography-container px-72 mt-4">
+  <div class="biography-container px-72 mt-4 font-mono">
     <p> {{ translations.biography.firstP }} </p>
     <p> {{ translations.biography.secondP }} </p>
     <p> {{ translations.biography.thirdP }} </p>
@@ -95,9 +95,8 @@ export default {
   }
 
   .biography-container{
-    font-family: $pixelized-font-family;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
