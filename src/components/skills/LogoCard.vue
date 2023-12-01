@@ -121,7 +121,7 @@ export default {
       const tl = gsap.timeline();
       switch (randomNumber) {
         case 1:
-          gsap.to(this.$el, { rotation: 360, backgroundColor: this.colorOfTheBackground, duration: 1 });
+          gsap.to(this.$el, { rotation: 360, backgroundColor: this.colorOfTheBackground, duration: 0.8 });
           break;
 
         case 2:
