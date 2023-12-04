@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="projects-container m-4 rounded" 
+    class="projects-container m-4 pt-8 rounded" 
     ref="projectsContainer"
     :style="{ 
       color: primaryColor, 
@@ -9,50 +9,57 @@
     }"
   >
 
-    <button @click="$refs.myVueperSlides[`${autoPlaying ? 'pause' : 'resume'}Autoplay`]();autoPlaying = !autoPlaying">
-      <v-icon size="large">{{ autoPlaying ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline' }}</v-icon>
-    </button>
 
     <vueper-slides
       ref="myVueperSlides"
       autoplay
+      duration="6000"
       :bullets="false"
       :pause-on-hover="pauseOnHover"
       @autoplay-pause="internalAutoPlaying = false"
       @autoplay-resume="internalAutoPlaying = true"
       class="no-shadow mx-16 bg-red-500" arrows-outside>
       
-<template #arrow-left>
-    <v-icon class="left-arrow" size="x-large">mdi-arrow-left-circle</v-icon>
-  </template>
+      <template #arrow-left>
+        <v-icon class="left-arrow" size="x-large">mdi-chevron-left</v-icon>
+      </template>
 
-  <template #arrow-right>
-    <v-icon class="right-arrow" size="x-large">mdi-arrow-right-circle</v-icon>
-  </template>
+      <template #arrow-right>
+        <v-icon class="right-arrow" size="x-large">mdi-chevron-right</v-icon>
+      </template>
 
-      <vueper-slide
-        v-for="(slide, i) in slides"
-        :key="i"
-        :title="slide.title"
-        :content="slide.content"
-        :style="{ 
-        boxShadow: 'none',
-      }"
-        class=""/>
+       
+ <vueper-slide
+    v-for="(slide, i) in slides"
+    :key="i"
+    :style="{ 
+          boxShadow: 'none',
+        }">
+    <template #content>
+     <ProjectCard :project="slide"/>
+    </template>
+  </vueper-slide>
+
       <template #pause>
         <i class="icon pause_circle_outline"></i>
       </template>
+
     </vueper-slides>
     
-
+    <div class="flex justify-center mt-4 text-3xl">
+      <button @click="$refs.myVueperSlides[`${autoPlaying ? 'pause' : 'resume'}Autoplay`]();autoPlaying = !autoPlaying">
+        <v-icon size="large">{{ autoPlaying ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline' }}</v-icon>
+      </button>
+    </div>
   </div>
 </template>
   
 <script>
 import { gsap } from "gsap";
 import { store } from '@/stores/store';
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
+import { VueperSlides, VueperSlide } from 'vueperslides';
+import 'vueperslides/dist/vueperslides.css';
+import ProjectCard from './ProjectCard.vue';
 
 
 export default {
@@ -60,6 +67,7 @@ export default {
   components: {
     VueperSlides,
     VueperSlide,
+    ProjectCard,
   },
   props: {    
   },
@@ -69,15 +77,9 @@ export default {
       autoPlaying: true,
       internalAutoPlaying: true,
       slides: [
-    {
-      title: 'Slide #1',
-      content: 'Slide 1 content.'
-    },
-    {
-      title: 'Slide #2',
-      content: 'Slide 2 content.'
-    }
-  ]
+          'phpZoo', 'sunset', 'puissance4', 'simpsonsFight', 'formulotheque'
+        ]
+      // slides: ['<ProjectCard/>', '<ProjectCard/>', '<ProjectCard/>', '<ProjectCard/>', '<ProjectCard/>']
     }
   },
   computed: {
