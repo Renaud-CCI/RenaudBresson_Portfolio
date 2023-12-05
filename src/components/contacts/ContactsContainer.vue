@@ -25,10 +25,23 @@
         </h2>
 
         <div class="inline-flex my-6">
-          <a class="" href="https://www.linkedin.com/in/renaud-bresson" :title="translations['linked-in-tag']" target="_blank"> <img :src="LinkedIn" alt="linkedIn_logo" class="w-20 mx-8"></a>
+          <a 
+            class="mx-8" 
+            href="https://www.linkedin.com/in/renaud-bresson" 
+            :title="translations['linked-in-tag']" 
+            target="_blank"
+            >
+            <v-icon ref="linkedinIcon">mdi-linkedin</v-icon>
+          </a>
 
-          <a class="" href="https://github.com/Renaud-CCI" target="_blank" :title="translations['github-tag']"> <img :src="Github" alt="github_logo" class="w-20 mx-8"></a>
-
+          <a 
+            class="mx-8" 
+            href="https://github.com/Renaud-CCI" 
+            target="_blank" 
+            :title="translations['github-tag']"
+            > 
+            <v-icon ref="githubIcon">mdi-github</v-icon>
+          </a>
         </div>
 
 
@@ -68,6 +81,7 @@
 import { store } from '@/stores/store';
 import LinkedIn from '@/assets/images/LinkedIn.png';
 import Github from '@/assets/images/lang_logos/GitHub.png';
+import { getLightenColor } from '@/services/colorService';
 
 export default {
   name: 'ContactsContainer',
@@ -93,8 +107,11 @@ export default {
       return store.secondaryColor;
     }
   },
+  mounted() {
+    this.$el.style.setProperty('--primary-color', store.primaryColor);
+    this.$el.style.setProperty('--light-color', getLightenColor(store.primaryColor, 80));
+  },
   methods: {
-   
   },
 };
 </script>
@@ -103,6 +120,15 @@ export default {
 @import "@/assets/variables.scss";
 .contacts-container{
   min-height:80vh;
+
+  .v-icon{
+    font-size: 6rem;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--light-color);
+    }
+  }
 }
 </style>
      
