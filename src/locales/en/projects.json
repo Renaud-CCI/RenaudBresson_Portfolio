@@ -1,0 +1,49 @@
+{
+  "web": "Visit the website",
+  "github": "View the source code",
+  "phpZoo": {
+    "title": "PHP ZOO",
+    "subtitle": "Individual project for 2 weeks completed in March 2023",
+    "technology": "PHP OOP / Tailwind CSS",
+    "description1": "You can create and evolve your zoo by adding enclosures, animals, or employees to clean cages, care for or feed their residents, and then move on to the next day to see the number of visitors received (and money earned!).",
+    "description2": "You can also log in with the username \"Test\" to enjoy a game that has already started and appreciate its playability.",
+    "link": "https://renaud-php-zoo.projets.garage404.com/index.php",
+    "githubLink": "https://github.com/renaud-bresson/php-zoo.git"
+  },
+  "sunset": {
+    "title": "SUNSET",
+    "subtitle": "Project completed in two-person team in 5 days in April 2023",
+    "technology": "PHP OOP / Bootstrap-Sass",
+    "description1": "As a user, you can select a destination, access the Tour Operators' comparator, read or write a comment, read the details of the offers...",
+    "description2": "You can also access the administrator dashboard by entering \"/admin\" in the URL. Feel free to log in as \"Admin\" or not...",
+    "link": "https://emerson-renaud-sunset.projets.garage404.com/",
+    "githubLink": "https://github.com/renaud-bresson/Sunset.git"
+  },
+  "puissance4": {
+    "title": "CONNECT 4",
+    "subtitle": "Individual project for 3 days in June 2023",
+    "technology": "JavaScript OOP / Tailwind CSS",
+    "description1": "Nothing very exceptional for this site, but the goal was to discover JavaScript OOP and implement a complex algorithmic logic for victory conditions.",
+    "description2": "You can customize your grid as well as the name and color of each player, play only one game or chain rounds with a victory points objective..!",
+    "link": "https://renaud-puissance4.projets.garage404.com/",
+    "githubLink": "https://github.com/renaud-bresson/puissance4.git"
+  },
+  "simpsonsFight": {
+    "title": "SIMPSONS FIGHT",
+    "subtitle": "Individual project for 10 days in July 2023",
+    "technology": "Angular - Bootstrap CSS",
+    "description1": "Springfield Elementary must face an alien invasion. A random team of 4 students takes on the challenge of fighting Kang, but he won't go down without a fight...",
+    "description2": "In turn, perform specific actions for each fighter until victory.. or not!",
+    "link": "https://simpsons-fight.vercel.app/",
+    "githubLink": "https://github.com/Renaud-CCI/2023-06-26_sample-random-rumble-angular"
+  },
+  "formulotheque": {
+    "title": "FORMULOTHEQUE",
+    "subtitle": "Individual project completed in October 2023",
+    "technology": "Symfony - Tailwind CSS",
+    "description1": "Formulothèque is a site that allows you to create registration or sales forms, share them with your network, and manage the subscriptions made to them.",
+    "description2": "The template remains basic, but the application is complete in terms of functionality; the goal was mainly to explore the capabilities of Symfony and Twig rendering, as well as to create a first \"real\" site.",
+    "link": "https://www.formulotheque.fr/",
+    "githubLink": null
+  }
+}

@@ -4,7 +4,7 @@
 
       <photo-profile :image="photoProfileImg" :borderColor="primaryColor"></photo-profile>
 
-      <v-toolbar-title :style="{ color: primaryColor, fontWeight: 'bold' }">Renaud Bresson</v-toolbar-title>
+      <v-toolbar-title class="title-bold" :style="{ color: primaryColor }">Renaud Bresson</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -197,11 +197,14 @@ import ContactsContainer from './components/contacts/ContactsContainer.vue';
   margin: 2.5rem 0.5rem 2rem 4rem;
 }
 
+.title-bold :nth-child(1) {
+  font-weight: 700;
+}
+
 .v-toolbar-title{
   margin-top: 0.5rem;
   line-height: 4rem;
-  font-family: $primary-font-family-bold;
-  font-size: 3.5rem;
+  font-size: 3.6rem;
 
   .v-toolbar-title__placeholder{
     margin-top: 2rem;

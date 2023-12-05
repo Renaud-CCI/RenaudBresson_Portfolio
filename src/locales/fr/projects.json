@@ -7,6 +7,7 @@
     "technology": "POO PHP / Tailwind CSS",
     "description1": "Vous pouvez créer et faire évoluer votre zoo en ajoutant des enclos, des animaux ou des employé.e.s pour nettoyer les cages, soigner ou nourrir leurs pensionnaires, puis passer au jour suivant pour visualiser le nombre de visiteurs reçus (et d'argent gagné!).",
     "description2": "Vous pouvez aussi vous loguer avec le pseudo \"Test\" pour profiter d'une partie déjà entamée et en apprécier la jouabilité.",
+    "link": "https://renaud-php-zoo.projets.garage404.com/index.php",
     "githubLink": "https://github.com/renaud-bresson/php-zoo.git"
   },
   "sunset": {
@@ -15,14 +16,16 @@
     "technology": "POO PHP / Bootstrap-Sass",
     "description1": "En tant qu'utilisateur vous pouvez sélectionner une destination, acceder au comparateur des Tour Opérators, lire ou écrire un commentaire, lire le détail des offres...",
     "description2": "Vous pouvez aussi acceder au dashboard administrateur en saisissant \"/admin\" dans l'URL. Libre à vous de vous loguer en tant qu' \"Admin\" ou pas...",
+    "link": "https://emerson-renaud-sunset.projets.garage404.com/",
     "githubLink":"https://github.com/renaud-bresson/Sunset.git"
   },
   "puissance4": {
     "title": "PUISSANCE 4",
     "subtitle": "TP individuel de 3 jours en juin 2023",
     "technology": "POO JavaScript / Tailwind CSS",
-    "description1": "Rien de très exceptionnel pour ce site mais il s'agissait de découvrir la POO Javascript et de mettre en place une logique algorithmique complexe pour les conditions de victoire",
+    "description1": "Rien de très exceptionnel pour ce site mais il s'agissait de découvrir la POO Javascript et de mettre en place une logique algorithmique complexe pour les conditions de victoire.",
     "description2": "Vous pouvez personaliser votre grille ainsi que le nom et la couleur de chaque joueur, ne faire qu'une partie ou enchainer les manches avec un objectif de points de victoire..!",
+    "link": "https://renaud-puissance4.projets.garage404.com/",
     "githubLink":"https://github.com/renaud-bresson/puissance4.git"
   },
   "simpsonsFight": {
@@ -31,6 +34,7 @@
     "technology": "Angular - Bootstrap CSS",
     "description1": "L'école de Springfield doit faire face à une invasion extra-terrestre. Une équipe aléatoire de 4 élèves relève le défi de combattre Kang mais ce dernier ne se laissera pas faire...",
     "description2": "Tout à tour, effectuez les actions spécifiques à chaque combattant jusqu'à la victoire.. ou pas!",
+    "link":"https://simpsons-fight.vercel.app/",
     "githubLink":"https://github.com/Renaud-CCI/2023-06-26_sample-random-rumble-angular"
   },
   "formulotheque": {
@@ -39,6 +43,7 @@
     "technology": "Symfony - Tailwind CSS",
     "description1": "Formulothèque est un site qui vous permet de créer des formulaires d'inscription ou de vente, de les partager à votre réseau et de gérer les souscriptions qui y sont éffectuées.",
     "description2": "Le template reste basique mais l'application est complete en terme de fonctionalités, le but était surtout d'explorer les capacités de Symfony et des rendus twig, ainsi que de faire un premier \"vrai\" site.",
+    "link": "https://www.formulotheque.fr/",
     "githubLink": null
   }
 }

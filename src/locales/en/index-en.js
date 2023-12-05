@@ -3,13 +3,15 @@ import settings from './settings.json';
 import about from './about.json';
 import skills from './skills.json';
 import contacts from './contacts.json';
+import projects from './projects.json';
 
 const en = {
   toolbar,
   settings,
   about,
   skills,
-  contacts
+  contacts,
+  projects,
 };
 
 export default en;

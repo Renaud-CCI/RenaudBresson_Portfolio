@@ -18,7 +18,7 @@
       :pause-on-hover="pauseOnHover"
       @autoplay-pause="internalAutoPlaying = false"
       @autoplay-resume="internalAutoPlaying = true"
-      class="no-shadow mx-16 bg-red-500" arrows-outside>
+      class="no-shadow mx-16" arrows-outside>
       
       <template #arrow-left>
         <v-icon class="left-arrow" size="x-large">mdi-chevron-left</v-icon>
@@ -46,7 +46,7 @@
 
     </vueper-slides>
     
-    <div class="flex justify-center mt-4 text-3xl">
+    <div class="flex justify-center mt-8 text-3xl">
       <button @click="$refs.myVueperSlides[`${autoPlaying ? 'pause' : 'resume'}Autoplay`]();autoPlaying = !autoPlaying">
         <v-icon size="large">{{ autoPlaying ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline' }}</v-icon>
       </button>
