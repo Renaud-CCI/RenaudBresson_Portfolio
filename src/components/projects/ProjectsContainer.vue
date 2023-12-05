@@ -77,9 +77,8 @@ export default {
       autoPlaying: true,
       internalAutoPlaying: true,
       slides: [
-          'phpZoo', 'sunset', 'puissance4', 'simpsonsFight', 'formulotheque'
+          'formulotheque', 'simpsonsFight', 'puissance4', 'sunset', 'phpZoo'
         ]
-      // slides: ['<ProjectCard/>', '<ProjectCard/>', '<ProjectCard/>', '<ProjectCard/>', '<ProjectCard/>']
     }
   },
   computed: {

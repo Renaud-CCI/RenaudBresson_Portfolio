@@ -7,7 +7,14 @@
 
       <div class="col-span-1 flex justify-center items-center py-4">
         <a class="flex justify-center" :href="translations[project]['link']" target="blank">
-          <img :src="src" :alt="project + '_logo'" class="projectImg w-3/4 rounded-lg">
+          <img 
+            :src="src" 
+            :alt="project + '_logo'" 
+            class="projectImg w-3/4 rounded-lg"            
+            ref="projectImg"
+            @mouseover="animateImage"
+            @mouseout="resetImage"
+            >
         </a>
       </div>
 
@@ -112,19 +119,33 @@ export default {
     this.$el.style.setProperty('--secondary-color', store.secondaryColor);
   },
   methods: {
-    animateButton(refName) {
-      gsap.to(this.$refs[refName], { 
-        backgroundColor: this.secondaryColor, 
-        color: this.primaryColor, 
-        border: "1px solid var(--primary-color)",
-        duration: 0.5 });
-    },
-    resetButton(refName) {
-      gsap.to(this.$refs[refName], { 
-        backgroundColor: this.primaryColor, 
-        color: this.secondaryColor, 
-        duration: 0.5 });
-    },
+      animateImage() {
+    gsap.to(this.$refs.projectImg, { 
+      scale: 1.1,
+      boxShadow: '-20px 20px 50px 0 var(--primary-color)',  
+      duration: 0.5 
+    });
+  },
+  resetImage() {
+    gsap.to(this.$refs.projectImg, { 
+      scale: 1.0,
+      boxShadow: '-1px 1px 5px 0 var(--primary-color)', 
+      duration: 0.5 
+    });
+  },
+    // animateButton(refName) {
+    //   gsap.to(this.$refs[refName], { 
+    //     backgroundColor: this.secondaryColor, 
+    //     color: this.primaryColor, 
+    //     border: "1px solid var(--primary-color)",
+    //     duration: 0.5 });
+    // },
+    // resetButton(refName) {
+    //   gsap.to(this.$refs[refName], { 
+    //     backgroundColor: this.primaryColor, 
+    //     color: this.secondaryColor, 
+    //     duration: 0.5 });
+    // },
   },
 };
 </script>
@@ -133,7 +154,7 @@ export default {
 @import "@/assets/variables.scss";
 .project-card{ 
   .projectImg{
-    box-shadow: -1px 1px 5px 0 var(--primary-color);    
+    box-shadow: -1px 1px 5px 0 var(--primary-color);  
   }
 
   .project-title{
