@@ -1,13 +1,13 @@
 <template>
-  <section id="language-input" class="my-12">
+  <section id="language-input" class="my-8">
      <div 
-      class="flex justify-center items-center w-full h-12 text-2xl grid-cols-2"
+      class="flex justify-center items-center w-full h-12 text-lg md:text-2xl 2xl:text-4xl grid-cols-2"
     >
-      <div class="col-span-1 text-end px-2 w-1/2">
+      <div class="col-span-1 text-end px-2 w-2/3">
         {{ translations.title }}
       </div>
 
-      <div class="col-span-1 text-start ps-12 w-1/2 flex items-center">
+      <div class="col-span-1 text-start ps-4 md:ps-12 w-1/2 flex items-center">
         
         <select v-model="$i18n.locale" id="selectTest">
           <option v-for="lang in availableLanguages" :key="lang" :value="lang">

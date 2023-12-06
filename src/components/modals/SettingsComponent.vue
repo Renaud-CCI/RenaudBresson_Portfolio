@@ -10,7 +10,7 @@
     }"
   >
 
-    <div class="text-end w-full pe-12 pt-6">
+    <div class="text-end w-full pe-4 md:pe-12 pt-4 md:pt-6">
       <div ref="closeButtonIcon">
         <v-btn icon @click="$emit('close')" @mouseover="bounceEffect">
           <v-icon icon >mdi-close-circle-outline</v-icon>
@@ -21,7 +21,7 @@
 
     <div class="flex flex-col justify-center items-center w-full h-5/6">
     
-      <h2 class="text-4xl mb-12">{{ translations.description }}</h2>
+      <h2 class="text-center text-2xl md:text-4xl 2xl:text-6xl mt-0 mb-12">{{ translations.description }}</h2>
 
       <div class="w-full">
         <ColorInput :role="'primary'" />
@@ -101,9 +101,16 @@ export default {
   border-radius: 1rem;
 
   .v-icon {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .v-icon {
+      font-size: 2.5rem;
+    }
   }
 }
+
 .settings-backscreen {
   z-index: 5;
   position: fixed;

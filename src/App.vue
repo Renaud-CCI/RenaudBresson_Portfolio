@@ -26,6 +26,8 @@
       <template v-slot:extension>
         <v-tabs
           v-model="tab"
+          center-active
+          show-arrows
           :style="{ color: lightenPrimaryColor }"
           :color="primaryColor"
           :bg-color="secondaryColor"
@@ -116,12 +118,25 @@ import {getLightenColor } from './services/colorService';
       updateToolbarHeight() {
         this.$nextTick(() => {
           const toolbar = document.querySelector('.v-toolbar__content');
-          toolbar.style.height = '80px';
-          toolbar.style.fontFamily = this.fontFamilyBold;
-          setTimeout(() => {
+          const toolbarTitle = document.querySelector('.v-toolbar-title__placeholder');
+          if (window.innerWidth <= 1024) {
+            // Styles for mobile screens
+            toolbar.style.height = '50px';
+            toolbar.style.fontFamily = this.fontFamilyBold;
+            toolbarTitle.style.width = '75vw';
+            setTimeout(() => {
+              toolbar.style.height = '50px';
+            toolbar.style.fontFamily = this.fontFamilyBold;
+            toolbarTitle.style.width = '75vw';
+            }, 200);
+          } else {
             toolbar.style.height = '80px';
             toolbar.style.fontFamily = this.fontFamilyBold;
-          }, 200);
+            setTimeout(() => {
+              toolbar.style.height = '80px';
+              toolbar.style.fontFamily = this.fontFamilyBold;
+            }, 200);
+          }
         });
       },
 
@@ -197,19 +212,16 @@ import {getLightenColor } from './services/colorService';
   padding-right: 1rem;
   font-size:3rem;
 
-  .settings-toolkit{
-    background-color: red,
-  }
 }
 
 .v-tabs {
   width:100%;
 
   .v-tab{
-    width: 10vw;
+    width: 12vw;
     padding: auto;
     margin: 0 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: transform 0.3s ease;
       &:hover {
         transform: scale(1.02);
@@ -219,6 +231,39 @@ import {getLightenColor } from './services/colorService';
 
 .v-card{
   box-shadow: none;
+}
+
+@media screen and (max-width: 1535px) {
+  .v-tabs {
+    .v-tab {
+      width: 15vw;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-img{
+    display:none;
+  }
+
+  .v-toolbar-title{
+    margin-top: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .mdi-cog{
+    margin-top: 0.5rem;
+    padding-right: 0.5rem;
+    font-size:2rem;
+
+  }
+  .v-tabs {
+    .v-tab {
+      width: 30vw;
+      font-size: 0.7rem;
+    }
+  }
 }
 
 
