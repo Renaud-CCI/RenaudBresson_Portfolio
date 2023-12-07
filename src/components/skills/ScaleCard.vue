@@ -1,20 +1,20 @@
 <template>
   <section id="scale-card" class="">
 
-   <div class="grid grid-cols-1">
+   <div class="grid grid-cols-3">
 
-              <div class="col-span-1">
+              <div class="col-span-1 sm:col-span-3">
               <ScaleColorInput :role="role" />
               </div>
 
-              <div class="col-span-1 h-16 flex justify-center items-center">
-                <p class="uppercase text-xl font-bold text-center pt-4 px-14">
+              <div class="title col-span-2 sm:col-span-3 flex justify-center items-center h-full lg:h-24 2xl:h-28">
+                <p class="uppercase text-lg 2xl:text-3xl font-bold text-center">
                   {{ translations.title }}
                 </p>
               </div>
 
-              <div class="col-span-1">
-                <p class="italic text-center pt-2 px-6">
+              <div class="col-span-2 sm:col-span-3 col-start-2 sm:col-start-1">
+                <p class="italic text-center">
                   {{ translations.description }}
                 </p>
               </div>
@@ -74,6 +74,42 @@ export default {
 
 <style scoped lang="scss">
 @import "@/assets/variables.scss";
+ .title {
+  p {
+    padding: 0 4rem
+  }
+ }
 
+ .italic {
+  margin-top: -1rem;
+  padding: 0 1.5rem;
+ }
+
+
+  @media screen and (max-width: 1535px) {
+    .title {
+      p {
+        padding: 0 2rem;
+      }
+    }
+
+    .italic {
+      margin-top: -1.2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .title {
+      p {
+        padding: 0 0.2rem 0 0;
+      }
+    }
+
+    .italic {
+      margin: 0.2rem 0 1.5rem;
+      padding: 0 0.2rem 0 0;
+    }
+  }
 </style>
      

@@ -7,21 +7,21 @@
       backgroundColor: secondaryColor,
       boxShadow: '0 0 3px ' + primaryColor,
     }">
-      <div class="px-22 2xl:px-36">
-        <p class="text-xl pt-12 pb-4 px-20">
+      <div class="introduction">
+        <p class="intro1">
           {{ translations.title }}
         </p>
-        <div class="grid grid-cols-3">
-          <ScaleCard role="firstScale"/>          
-          <ScaleCard role="secondScale"/>
-          <ScaleCard role="thirdScale"/>
+        <div class="intro2 grid grid-cols-3">
+          <ScaleCard class="col-span-3 sm:col-span-1" role="firstScale"/>          
+          <ScaleCard class="col-span-3 sm:col-span-1" role="secondScale"/>
+          <ScaleCard class="col-span-3 sm:col-span-1" role="thirdScale"/>
         </div>
-        <p class="text-xl pt-8 px-20">
+        <p class="intro3">
           {{ translations.subtitle }}
         </p>
       </div>
 
-      <div class="grid grid-cols-4 gap-24 pt-24 pb-8 px-36">
+      <div class="cards grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 sm:gap-24">
         <LogoCard lang="Symfony" scale="thirdScale"/>        
         <LogoCard lang="Laravel" scale="firstScale"/>
         <LogoCard lang="JavaScript" scale="thirdScale"/>
@@ -79,6 +79,77 @@ export default {
 @import "@/assets/variables.scss";
 .skills-container{
   min-height:80vh;
+  text-align: justify;
+
+  .introduction {
+    padding: 3rem 10rem;
+
+    .intro1 {
+      font-size: 2rem;
+      padding: 0 4rem 4rem 4rem;
+    }
+
+    .intro2 {
+      font-size: 1.3rem;
+    }
+
+    .intro3 {
+      font-size: 2rem;
+      padding: 3rem 4rem 0 4rem;
+    }
+  }
+
+  .cards {
+    padding: 2rem 10rem;
+  }
+
+  @media screen and (max-width: 1535px) {
+    .introduction {
+      padding: 3rem 1rem;
+
+      .intro1 {
+        font-size: 1.3rem;
+        padding: 0 4rem 2.5rem 4rem;
+      }
+
+      .intro2 {
+        font-size: 1rem;
+      }
+
+      .intro3 {
+        font-size: 1.3rem;
+        padding: 2rem 4rem 0 4rem;
+      }
+    }
+
+    .cards {
+      padding: 2rem 10rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .introduction {
+      padding: 1rem 0;
+
+      .intro1 {
+        font-size: 1rem;
+        padding: 0 1.2rem 2.5rem 1.2rem;
+      }
+
+      .intro2 {
+        font-size: 0.7rem;
+      }
+
+      .intro3 {
+        font-size: 1rem;
+        padding: 0.5rem 1.2rem 0 1.2rem;
+      }
+    }
+
+    .cards {
+      padding: 1rem 1rem;
+    }
+  }
 }
 
 </style>

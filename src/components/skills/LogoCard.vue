@@ -5,7 +5,7 @@
       <div class="flex flex-col justify-center items-center">
         <img :src="src" :alt="lang + '_logo'" class="w-28 py-4">
       </div>
-      <h2 class="text-2xl text-center font-bold text-neutral-700">{{ lang }}</h2>
+      <h2 class=" text-lg xl:text-2xl 2xl:text-3xl text-center font-bold text-neutral-700">{{ lang }}</h2>
     </div>
 
   </section>
