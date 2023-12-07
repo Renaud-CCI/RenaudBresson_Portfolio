@@ -32,7 +32,7 @@
             class="flex justify-center items-center"
             >
             <button 
-              class="text-justify rounded-lg text-lg lg:text-xl 2xl:text-2xl"
+              class="text-center rounded-lg text-lg lg:text-xl 2xl:text-2xl"
               ref="webButton"
               @mouseover="animateButton('webButton')"
               @mouseout="resetButton('webButton')"
@@ -49,7 +49,7 @@
             class="col-span-2 sm:col-span-1 flex justify-center items-center"
             >
             <button 
-              class="text-justify rounded-lg text-lg lg:text-xl 2xl:text-2xl"
+              class="text-center rounded-lg text-lg lg:text-xl 2xl:text-2xl"
               ref="githubButton"
               @mouseover="animateButton('githubButton')"
               @mouseout="resetButton('githubButton')"
@@ -253,6 +253,7 @@ export default {
         margin-top: 1rem;
 
         button {
+          text-align: center;
           padding: 0.3rem 1rem;
           width: 60vw;
           margin: 0.3rem 0;
