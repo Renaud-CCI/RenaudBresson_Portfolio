@@ -3,7 +3,7 @@
 
    <div class="grid grid-cols-3">
 
-              <div class="col-span-1 sm:col-span-3">
+              <div class="row-span-2 sm:row-span-1 col-span-1 sm:col-span-3">
               <ScaleColorInput :role="role" />
               </div>
 
