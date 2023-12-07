@@ -19,7 +19,7 @@
       :fixed-height="true"
       @autoplay-pause="internalAutoPlaying = false"
       @autoplay-resume="internalAutoPlaying = true"
-      class="no-shadow mx-16" arrows-outside>
+      class="no-shadow slides-div" arrows-outside>
       
       <template #arrow-left>
         <v-icon class="left-arrow" size="x-large">mdi-chevron-left</v-icon>
@@ -30,16 +30,18 @@
       </template>
 
        
- <vueper-slide
-    v-for="(slide, i) in slides"
-    :key="i"
-    :style="{ 
-          boxShadow: 'none',
-        }">
-    <template #content>
-     <ProjectCard :project="slide"/>
-    </template>
-  </vueper-slide>
+      <vueper-slide
+        v-for="(slide, i) in slides"
+        :key="i"
+        :style="{ 
+              boxShadow: 'none',
+            }">
+
+        <template #content>
+        <ProjectCard :project="slide"/>
+        </template>
+
+      </vueper-slide>
 
       <template #pause>
         <i class="icon pause_circle_outline"></i>
@@ -47,7 +49,7 @@
 
     </vueper-slides>
     
-    <div class="flex justify-center mt-4 text-3xl">
+    <div class="pause-button flex justify-center text-3xl 2xl:text-5xl">
       <button @click="$refs.myVueperSlides[`${autoPlaying ? 'pause' : 'resume'}Autoplay`]();autoPlaying = !autoPlaying">
         <v-icon size="large">{{ autoPlaying ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline' }}</v-icon>
       </button>
@@ -108,18 +110,34 @@ export default {
 .projects-container{
   min-height:80vh;
 
+  .slides-div {
+    margin: 0 4rem;
+  }
+
   .left-arrow, .right-arrow {
     color: var(--primary-color);
     font-size: 8rem;
   }
 
   .vueperslides--fixed-height { height: 65vh; }
-  
-@media screen and (max-width: 1535px) {
+
+
+  @media screen and (max-width: 1535px) {
     .left-arrow, .right-arrow {
-    font-size: 5rem;
+      font-size: 5rem;
+    }
   }
-}
+
+  @media screen and (max-width: 768px) {
+    .slides-div {
+      margin: 0 2.5rem;
+    }
+    .left-arrow, .right-arrow {
+      font-size: 2.5rem;
+    }
+
+    .vueperslides--fixed-height { height: 95vh; }
+  }
 }
 
 
