@@ -216,7 +216,7 @@ export default {
       padding: 0 0;
     .img-div{
       .projectImg{
-        width: 55vw;
+        width: 60vw;
       }
     }
 
