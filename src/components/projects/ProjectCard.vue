@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="project-card m-6 rounded" 
+    class="project-card my-2 2xl:my-6 mx-6 rounded" 
     ref="projectCard"
   >
     <div class="grid grid-cols-2">
@@ -10,7 +10,7 @@
           <img 
             :src="src" 
             :alt="project + '_logo'" 
-            class="projectImg w-3/4 rounded-lg"            
+            class="projectImg w-3/4 2xl:w-full rounded-lg"            
             ref="projectImg"
             @mouseover="animateImage"
             @mouseout="resetImage"
@@ -19,12 +19,12 @@
       </div>
 
       <div class="col-span-1 flex-col py-4 pe-4 justify-center items-center text-center">
-        <h2 class="project-title text-5xl"> {{ translations[project]['title'] }} </h2>
-        <p class="text-xl pt-2">{{ translations[project]['subtitle'] }}</p>
-        <p class="text-xl font-bold pt-1">{{ translations[project]['technology'] }}</p>
+        <h2 class="project-title text-5xl 2xl:text-6xl"> {{ translations[project]['title'] }} </h2>
+        <p class="text-lg 2xl:text-2xl pt-1 2xl:pt-2">{{ translations[project]['subtitle'] }}</p>
+        <p class="text-lg 2xl:text-2xl font-bold pt-0 2xl:pt-1">{{ translations[project]['technology'] }}</p>
         
-        <p class="text-2xl text-justify pt-4">{{ translations[project]['description1'] }}</p>
-        <p class="text-2xl text-justify pt-1">{{ translations[project]['description2'] }}</p> 
+        <p class="text-xl 2xl:text-3xl text-justify pt-4">{{ translations[project]['description1'] }}</p>
+        <p class="text-xl 2xl:text-3xl text-justify pt-1">{{ translations[project]['description2'] }}</p> 
 
         <div class="buttons grid grid-cols-2 justify-center items-center mt-8">
           <div 
@@ -32,7 +32,7 @@
             class="flex justify-center items-center"
             >
             <button 
-              class="text-justify py-1 px-3 rounded-lg"
+              class="text-justify py-2 2xl:py-4 px-3 rounded-lg text-xl 2xl:text-2xl"
               ref="webButton"
               @mouseover="animateButton('webButton')"
               @mouseout="resetButton('webButton')"
@@ -49,7 +49,7 @@
             class="col-span-1 flex justify-center items-center"
             >
             <button 
-              class="text-justify py-1 px-3 rounded-lg"
+              class="text-justify py-2 2xl:py-4 px-3 rounded-lg text-xl 2xl:text-2xl"
               ref="githubButton"
               @mouseover="animateButton('githubButton')"
               @mouseout="resetButton('githubButton')"
@@ -119,33 +119,20 @@ export default {
     this.$el.style.setProperty('--secondary-color', store.secondaryColor);
   },
   methods: {
-      animateImage() {
-    gsap.to(this.$refs.projectImg, { 
-      scale: 1.1,
-      boxShadow: '-20px 20px 50px 0 var(--primary-color)',  
-      duration: 0.5 
-    });
-  },
-  resetImage() {
-    gsap.to(this.$refs.projectImg, { 
-      scale: 1.0,
-      boxShadow: '-1px 1px 5px 0 var(--primary-color)', 
-      duration: 0.5 
-    });
-  },
-    // animateButton(refName) {
-    //   gsap.to(this.$refs[refName], { 
-    //     backgroundColor: this.secondaryColor, 
-    //     color: this.primaryColor, 
-    //     border: "1px solid var(--primary-color)",
-    //     duration: 0.5 });
-    // },
-    // resetButton(refName) {
-    //   gsap.to(this.$refs[refName], { 
-    //     backgroundColor: this.primaryColor, 
-    //     color: this.secondaryColor, 
-    //     duration: 0.5 });
-    // },
+    animateImage() {
+      gsap.to(this.$refs.projectImg, { 
+        scale: 1.1,
+        boxShadow: '-20px 20px 50px 0 var(--primary-color)',  
+        duration: 0.5 
+      });
+    },
+    resetImage() {
+      gsap.to(this.$refs.projectImg, { 
+        scale: 1.0,
+        boxShadow: '-1px 1px 5px 0 var(--primary-color)', 
+        duration: 0.5 
+      });
+    },
   },
 };
 </script>
@@ -174,7 +161,12 @@ export default {
       padding-bottom: 0.2rem;
     }
   }
+
+  @media screen and (max-width: 1535px) {
+
+  }
 }
+
 
 </style>
      

@@ -7,7 +7,7 @@
       backgroundColor: secondaryColor,
       boxShadow: '0 0 3px ' + primaryColor,
     }">
-      <div class="px-36">
+      <div class="px-22 2xl:px-36">
         <p class="text-xl pt-12 pb-4 px-20">
           {{ translations.title }}
         </p>

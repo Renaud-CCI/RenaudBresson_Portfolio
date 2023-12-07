@@ -38,8 +38,8 @@ export default {
 
 .image-container{
   position: relative;
-  width: 210px;
-  height: 250px;
+  width: 260px;
+  height: 310px;
 
   .gameboy-photo{
     position: absolute;
@@ -58,7 +58,22 @@ export default {
     opacity: 0.5;
     border-radius: 5px;
   }
+
 }
+
+  @media screen and (max-width: 1535px) {
+    .image-container{
+      width: 190px;
+      height: 240px
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .image-container{
+      width: 150px;
+      height: 185px;
+    }
+  }
 
 
 </style>

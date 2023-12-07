@@ -16,6 +16,7 @@
       duration="6000"
       :bullets="false"
       :pause-on-hover="pauseOnHover"
+      :fixed-height="true"
       @autoplay-pause="internalAutoPlaying = false"
       @autoplay-resume="internalAutoPlaying = true"
       class="no-shadow mx-16" arrows-outside>
@@ -46,7 +47,7 @@
 
     </vueper-slides>
     
-    <div class="flex justify-center mt-8 text-3xl">
+    <div class="flex justify-center mt-4 text-3xl">
       <button @click="$refs.myVueperSlides[`${autoPlaying ? 'pause' : 'resume'}Autoplay`]();autoPlaying = !autoPlaying">
         <v-icon size="large">{{ autoPlaying ? 'mdi-pause-circle-outline' : 'mdi-play-circle-outline' }}</v-icon>
       </button>
@@ -107,12 +108,21 @@ export default {
 .projects-container{
   min-height:80vh;
 
-    .left-arrow, .right-arrow {
-      color: var(--primary-color);
-      font-size: 5rem;
-    }
+  .left-arrow, .right-arrow {
+    color: var(--primary-color);
+    font-size: 8rem;
+  }
+
+  .vueperslides--fixed-height { height: 65vh; }
   
+@media screen and (max-width: 1535px) {
+    .left-arrow, .right-arrow {
+    font-size: 5rem;
+  }
 }
+}
+
+
 
 </style>
      
