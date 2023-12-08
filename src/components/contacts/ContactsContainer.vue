@@ -20,7 +20,7 @@
 
         <h2 class="title1 font-bold text-center">
           {{ translations.title.part1 }}
-          {{ translations.title.part2 }}
+            <a :href="cv" download>{{ translations.title.part2 }}</a>
           {{ translations.title.part3 }}
         </h2>
 
@@ -80,6 +80,7 @@ import { store } from '@/stores/store';
 import LinkedIn from '@/assets/images/LinkedIn.png';
 import Github from '@/assets/images/lang_logos/GitHub.png';
 import { getLightenColor } from '@/services/colorService';
+import cv from '@/assets/cv/cv.pdf';
 
 export default {
   name: 'ContactsContainer',
@@ -92,6 +93,7 @@ export default {
     return {
       LinkedIn: LinkedIn,
       Github: Github,
+      cv: cv,
     }
   },
   computed: {
@@ -124,6 +126,11 @@ export default {
     .title1 {
       padding: 2rem 20rem 0;
       font-size: 2.2rem;
+
+      a {
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
 
     .link-div {
