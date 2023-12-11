@@ -23,6 +23,7 @@
   
 <script>
 import { store } from '@/stores/store';
+import { EventBus } from '@/event-bus';
 
 export default {
   name: 'ColorInput',
@@ -50,7 +51,6 @@ export default {
   },
   mounted() {
     this.updateColor();
-    console.log(Object.keys(this.$i18n.messages));
   },
   methods: {
     updateColor() {
@@ -66,6 +66,8 @@ export default {
       } else if (this.role === 'secondary') {
         store.secondaryColor = this.color;
       }
+      EventBus.emit('appColorChanged');
+      console.log('color changed');
     },
   },
   created() {

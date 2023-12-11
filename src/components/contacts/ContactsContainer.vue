@@ -81,6 +81,7 @@ import LinkedIn from '@/assets/images/LinkedIn.png';
 import Github from '@/assets/images/lang_logos/GitHub.png';
 import { getLightenColor } from '@/services/colorService';
 import cv from '@/assets/cv/cv.pdf';
+import { EventBus } from '@/event-bus';
 
 export default {
   name: 'ContactsContainer',
@@ -110,8 +111,16 @@ export default {
   mounted() {
     this.$el.style.setProperty('--primary-color', store.primaryColor);
     this.$el.style.setProperty('--light-color', getLightenColor(store.primaryColor, 80));
+    EventBus.on('appColorChanged', this.colorChanged);
+  },
+  beforeUnmount() {
+    EventBus.off('appColorChanged', this.colorChanged);
   },
   methods: {
+    colorChanged() {
+      this.$el.style.setProperty('--primary-color', store.primaryColor);
+      this.$el.style.setProperty('--light-color', getLightenColor(store.primaryColor, 80));
+    },
   },
 };
 </script>
