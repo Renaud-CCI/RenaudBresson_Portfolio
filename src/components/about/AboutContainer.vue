@@ -105,7 +105,7 @@ export default {
   }
 
 
-  @media screen and (max-width: 1535px) {
+  @media screen and (max-width: 1736px) {
     .description-container{
       min-height: 300px;
 

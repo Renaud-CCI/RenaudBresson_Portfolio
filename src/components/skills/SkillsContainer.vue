@@ -103,7 +103,7 @@ export default {
     padding: 2rem 10rem;
   }
 
-  @media screen and (max-width: 1535px) {
+  @media screen and (max-width: 1736px) {
     .introduction {
       padding: 3rem 1rem;
 

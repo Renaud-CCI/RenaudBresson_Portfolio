@@ -233,7 +233,7 @@ import {getLightenColor } from './services/colorService';
   box-shadow: none;
 }
 
-@media screen and (max-width: 1535px) {
+@media screen and (max-width: 1736px) {
   .v-tabs {
     .v-tab {
       width: 15vw;

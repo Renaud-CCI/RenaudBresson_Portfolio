@@ -181,7 +181,7 @@ export default {
     }
   }
 
-   @media screen and (max-width: 1535px) {
+   @media screen and (max-width: 1736px) {
     .form-container {
 
       .title1 {

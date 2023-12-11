@@ -188,7 +188,7 @@ export default {
 
 
   
-  @media screen and (max-width: 1535px) {
+  @media screen and (max-width: 1736px) {
     padding: 0 0;
 
     .text-div {
@@ -199,15 +199,15 @@ export default {
       }
       
       .project-description1 {
-        margin: 1rem 1rem 0 1rem;
+        margin: 0.4rem 1rem 0 0.8rem;
       }
       
       .project-description2 {
-        margin: 1rem 1rem 0 1rem;
+        margin: 0.4rem 1rem 0 0.8rem;
       }
       
       .project-buttons {
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
     }
   }
