@@ -19,11 +19,11 @@
       </div>
 
       <div class="text-div col-span-2 sm:col-span-1 flex-col justify-center items-center text-center">
-        <h2 class="project-title text-3xl sm:text-5xl 2xl:text-6xl"> {{ translations[project]['title'] }} </h2>
-        <p class="project-subtitle text-lg 2xl:text-2xl">{{ translations[project]['subtitle'] }}</p>
-        <p class="project-technology text-lg 2xl:text-2xl font-bold">{{ translations[project]['technology'] }}</p>
+        <h2 class="project-title"> {{ translations[project]['title'] }} </h2>
+        <p class="project-subtitle">{{ translations[project]['subtitle'] }}</p>
+        <p class="project-technology font-bold">{{ translations[project]['technology'] }}</p>
         
-        <p class="project-description1 text-xl 2xl:text-3xl text-justify">{{ translations[project]['description1'] }}</p>
+        <p class="project-description1 text-justify">{{ translations[project]['description1'] }}</p>
         <p class="project-description2 text-xl 2xl:text-3xl text-justify">{{ translations[project]['description2'] }}</p> 
 
         <div class="project-buttons grid grid-cols-2 justify-center items-center">
@@ -32,7 +32,7 @@
             class="flex justify-center items-center"
             >
             <button 
-              class="text-center rounded-lg text-lg lg:text-xl 2xl:text-2xl"
+              class="text-center rounded-lg"
               ref="webButton"
               @mouseover="animateButton('webButton')"
               @mouseout="resetButton('webButton')"
@@ -49,7 +49,7 @@
             class="col-span-2 sm:col-span-1 flex justify-center items-center"
             >
             <button 
-              class="text-center rounded-lg text-lg lg:text-xl 2xl:text-2xl"
+              class="text-center rounded-lg"
               ref="githubButton"
               @mouseover="animateButton('githubButton')"
               @mouseout="resetButton('githubButton')"
@@ -152,22 +152,28 @@ export default {
     padding: 0 4rem 0 0;
 
     .project-title{
+      font-size: 3.5rem;
       font-family: $primary-font-family;
       font-weight: 700;
       margin: 1rem 0;
     }
 
     .project-subtitle {
+      font-size: 1.5rem;
     }
 
-    .project-technology{}
+    .project-technology{
+      font-size: 1.5rem;
+    }
     
     .project-description1 {
       margin: 2rem 1rem 0 1rem;
+      font-size: 1.75rem;
     }
     
     .project-description2 {
       margin: 2rem 1rem 0 1rem;
+      font-size: 1.75rem;
     }
     
     .project-buttons {
@@ -201,19 +207,36 @@ export default {
       padding: 0 0 0 0;
 
       .project-title{
+        font-size: 2.8rem;
         margin: 0 0;
       }
       
+      .project-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .project-technology{
+        font-size: 1.125rem;
+      }
+
       .project-description1 {
         margin: 0.4rem 1rem 0 0.8rem;
+        font-size: 1.25rem;
       }
       
       .project-description2 {
         margin: 0.4rem 1rem 0 0.8rem;
+        font-size: 1.25rem;
       }
       
       .project-buttons {
         margin-top: 1rem;
+        font-size: 1.25rem;
+
+        button {
+          background-color: var(--primary-color);
+          padding: 0.5rem 1.5rem;
+        }
       }
     }
   }
@@ -257,6 +280,7 @@ export default {
       
       .project-buttons {
         margin-top: 1rem;
+        font-size: 1rem;
 
         button {
           text-align: center;
