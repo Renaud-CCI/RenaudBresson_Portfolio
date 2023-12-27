@@ -122,7 +122,7 @@ export default {
     animateImage() {
       gsap.to(this.$refs.projectImg, { 
         scale: 1.02,
-        boxShadow: '-5px 5px 20px 0 var(--primary-color)',  
+        boxShadow: '-5px 5px 15px 0 var(--primary-color)',  
         duration: 0.5 
       });
     },
@@ -200,7 +200,7 @@ export default {
 
   .img-div{
     .projectImg{
-      width: 30vw;
+      width: 25vw;
     }
   }
     .text-div {

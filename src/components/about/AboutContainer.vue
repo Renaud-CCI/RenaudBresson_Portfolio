@@ -91,7 +91,7 @@ export default {
 
     .description{
       font-family: $pixelized-font-family;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       line-height: 2.8rem;
       margin-top: 0;
     }
@@ -99,7 +99,7 @@ export default {
 
   .biography-container{
     text-align: justify;
-    font-size: 1.7rem;    
+    font-size: 1.5rem;    
     margin: 2.5rem 28rem;
     padding-bottom: 1rem;
   }
@@ -110,13 +110,13 @@ export default {
       min-height: 300px;
 
       .description{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         line-height: 2.2rem;
       }
     }
 
     .biography-container{
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       margin: 0.8rem 12rem;
       padding-bottom: 1rem;
     }
