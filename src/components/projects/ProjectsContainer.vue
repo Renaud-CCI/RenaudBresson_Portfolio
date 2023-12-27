@@ -122,7 +122,7 @@ export default {
   .vueperslides--fixed-height { height: 65vh; }
 
 
-  @media screen and (max-width: 1736px) {
+  @media screen and (max-width: 1800px) {
     .left-arrow, .right-arrow {
       font-size: 5rem;
     }

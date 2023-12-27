@@ -121,8 +121,8 @@ export default {
   methods: {
     animateImage() {
       gsap.to(this.$refs.projectImg, { 
-        scale: 1.1,
-        boxShadow: '-20px 20px 50px 0 var(--primary-color)',  
+        scale: 1.02,
+        boxShadow: '-5px 5px 20px 0 var(--primary-color)',  
         duration: 0.5 
       });
     },
@@ -188,9 +188,15 @@ export default {
 
 
   
-  @media screen and (max-width: 1736px) {
+  @media screen and (max-width: 1800px) {
     padding: 0 0;
 
+
+  .img-div{
+    .projectImg{
+      width: 30vw;
+    }
+  }
     .text-div {
       padding: 0 0 0 0;
 

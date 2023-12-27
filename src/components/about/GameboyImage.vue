@@ -61,7 +61,7 @@ export default {
 
 }
 
-  @media screen and (max-width: 1736px) {
+  @media screen and (max-width: 1800px) {
     .image-container{
       width: 190px;
       height: 240px

@@ -86,7 +86,7 @@ export default {
  }
 
 
-  @media screen and (max-width: 1736px) {
+  @media screen and (max-width: 1800px) {
     .title {
       p {
         padding: 0 2rem;
