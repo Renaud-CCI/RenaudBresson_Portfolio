@@ -8,12 +8,12 @@
               </div>
 
               <div class="title col-span-2 sm:col-span-3 flex justify-center items-center h-full lg:h-24 2xl:h-28">
-                <p class="uppercase text-lg 2xl:text-3xl font-bold text-center">
+                <p class="uppercase font-bold text-center">
                   {{ translations.title }}
                 </p>
               </div>
 
-              <div class="col-span-2 sm:col-span-3 col-start-2 sm:col-start-1">
+              <div class="subtitle col-span-2 sm:col-span-3 col-start-2 sm:col-start-1">
                 <p class="italic text-center">
                   {{ translations.description }}
                 </p>
@@ -76,13 +76,15 @@ export default {
 @import "@/assets/variables.scss";
  .title {
   p {
-    padding: 0 4rem
+    padding: 0 4rem;
+    font-size: 1.5rem;
   }
  }
 
  .italic {
   margin-top: -1rem;
   padding: 0 1.5rem;
+  font-size: 1.25rem;
  }
 
 
@@ -90,12 +92,14 @@ export default {
     .title {
       p {
         padding: 0 2rem;
+        font-size: 1rem;
       }
     }
 
     .italic {
       margin-top: -1.2rem;
       padding: 0 1rem;
+      font-size: 0.8rem;
     }
   }
 
@@ -103,12 +107,14 @@ export default {
     .title {
       p {
         padding: 0 0.2rem 0 0;
+        font-size: 0.8rem;
       }
     }
 
     .italic {
       margin: 0.2rem 0 1.5rem;
       padding: 0 0.2rem 0 0;
+      font-size: 0.7rem;
     }
   }
 </style>

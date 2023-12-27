@@ -89,10 +89,6 @@ export default {
       padding: 0 4rem 4rem 4rem;
     }
 
-    .intro2 {
-      font-size: 1.3rem;
-    }
-
     .intro3 {
       font-size: 2rem;
       padding: 3rem 4rem 0 4rem;
@@ -108,16 +104,13 @@ export default {
       padding: 3rem 1rem;
 
       .intro1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding: 0 4rem 2.5rem 4rem;
       }
 
-      .intro2 {
-        font-size: 1rem;
-      }
 
       .intro3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding: 2rem 4rem 0 4rem;
       }
     }
@@ -134,10 +127,6 @@ export default {
       .intro1 {
         font-size: 1rem;
         padding: 0 1.2rem 2.5rem 1.2rem;
-      }
-
-      .intro2 {
-        font-size: 0.7rem;
       }
 
       .intro3 {
