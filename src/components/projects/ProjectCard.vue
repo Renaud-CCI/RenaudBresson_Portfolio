@@ -207,7 +207,7 @@ export default {
       padding: 0 0 0 0;
 
       .project-title{
-        font-size: 2.8rem;
+        font-size: 2.2rem;
         margin: 0 0;
       }
       
@@ -221,17 +221,17 @@ export default {
 
       .project-description1 {
         margin: 0.4rem 1rem 0 0.8rem;
-        font-size: 1.25rem;
+        font-size: 1rem;
       }
       
       .project-description2 {
         margin: 0.4rem 1rem 0 0.8rem;
-        font-size: 1.25rem;
+        font-size: 1rem;
       }
       
       .project-buttons {
         margin-top: 1rem;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
 
         button {
           background-color: var(--primary-color);
