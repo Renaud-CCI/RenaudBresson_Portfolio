@@ -161,7 +161,7 @@ export default {
 
     .contact-div {
       padding: 2rem 20rem;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
 
       .input-div {
         padding: 0 3rem;
@@ -203,7 +203,7 @@ export default {
 
       .contact-div {
         padding: 0 20rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
 
         .input-div {
           padding: 0 3rem;
