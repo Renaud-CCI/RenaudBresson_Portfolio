@@ -60,6 +60,7 @@
 <script>
 import { gsap } from "gsap";
 import { store } from '@/stores/store';
+import { EventBus } from '@/event-bus';
 import { VueperSlides, VueperSlide } from 'vueperslides';
 import 'vueperslides/dist/vueperslides.css';
 import ProjectCard from './ProjectCard.vue';
@@ -98,9 +99,18 @@ export default {
   mounted() {
     document.documentElement.style.setProperty('--primary-color', this.primaryColor);
     document.documentElement.style.setProperty('--secondary-color', this.secondaryColor);
+    EventBus.on('appColorChanged', this.updateColors);
+  },
+  beforeUnmount() {
+    EventBus.off('appColorChanged', this.updateColors);
   },
   methods: {
-    
+    updateColors() {
+      this.primaryColor = store.primaryColor;
+      this.secondaryColor = store.secondaryColor;
+      document.documentElement.style.setProperty('--primary-color', this.primaryColor);
+      document.documentElement.style.setProperty('--secondary-color', this.secondaryColor);
+    }
   },
 };
 </script>

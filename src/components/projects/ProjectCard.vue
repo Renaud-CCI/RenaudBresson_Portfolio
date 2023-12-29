@@ -71,6 +71,7 @@
 <script>
 import { gsap } from "gsap";
 import { store } from '@/stores/store';
+import { EventBus } from '@/event-bus';
 import formulothequeIMG from '@/assets/images/projects/formulotheque.png';
 import phpZooIMG from '@/assets/images/projects/phpZoo.png';
 import puissance4IMG from '@/assets/images/projects/puissance4.png';
@@ -87,15 +88,15 @@ export default {
       required: false,
     },
   },
+  data () {
+    return {
+      primaryColor: store.primaryColor,
+      secondaryColor: store.secondaryColor,
+    }
+  },
   computed: {
     translations() {
     return this.$i18n.messages[this.$i18n.locale].projects;
-    },
-    primaryColor() {
-      return store.primaryColor;
-    },
-    secondaryColor() {
-      return store.secondaryColor;
     },
     src() {
       switch (this.project) {
@@ -115,10 +116,20 @@ export default {
     }
   },
   mounted() {
-    this.$el.style.setProperty('--primary-color', store.primaryColor);
-    this.$el.style.setProperty('--secondary-color', store.secondaryColor);
+    this.$el.style.setProperty('--primary-color', this.primaryColor);
+    this.$el.style.setProperty('--secondary-color', this.secondaryColor);
+    EventBus.on('appColorChanged', this.updateColors);
+  },
+  beforeUnmount() {
+    EventBus.off('appColorChanged', this.updateColors);
   },
   methods: {
+    updateColors() {
+      this.primaryColor = store.primaryColor;
+      this.secondaryColor = store.secondaryColor;
+      this.$el.style.setProperty('--primary-color', this.primaryColor);
+      this.$el.style.setProperty('--secondary-color', this.secondaryColor);
+    },
     animateImage() {
       gsap.to(this.$refs.projectImg, { 
         scale: 1.02,

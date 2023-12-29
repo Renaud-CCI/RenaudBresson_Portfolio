@@ -67,7 +67,6 @@ export default {
         store.secondaryColor = this.color;
       }
       EventBus.emit('appColorChanged');
-      console.log('color changed');
     },
   },
   created() {
