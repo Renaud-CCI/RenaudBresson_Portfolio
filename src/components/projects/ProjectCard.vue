@@ -34,8 +34,6 @@
             <button 
               class="text-center rounded-lg"
               ref="webButton"
-              @mouseover="animateButton('webButton')"
-              @mouseout="resetButton('webButton')"
               >
               <v-icon size="">mdi-web</v-icon>
               <a class="ms-2" :href="translations[project]['link']" target="blank">
@@ -51,8 +49,6 @@
             <button 
               class="text-center rounded-lg"
               ref="githubButton"
-              @mouseover="animateButton('githubButton')"
-              @mouseout="resetButton('githubButton')"
               >
               <v-icon size="">mdi-github</v-icon>
               <a class="ms-2" :href="translations[project]['githubLink']" target="blank">
@@ -190,11 +186,18 @@ export default {
     .project-buttons {
       margin-top: 3rem;
       font-size: 1.5rem;
-      color: var(--secondary-color);
 
       button {
+        color: var(--secondary-color);
         background-color: var(--primary-color);
         padding: 1rem 2rem;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--primary-color);
+          background-color: var(--secondary-color);
+          border: 1px solid var(--primary-color);
+        }
       }
 
       .v-icon {
