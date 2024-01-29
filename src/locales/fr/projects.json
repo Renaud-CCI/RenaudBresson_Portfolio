@@ -45,5 +45,14 @@
     "description2": "Le template reste basique mais l'application est complete en terme de fonctionalités, le but était surtout d'explorer les capacités de Symfony et des rendus twig, ainsi que de faire un premier \"vrai\" site.",
     "link": "https://www.formulotheque.fr/",
     "githubLink": null
+  },
+  "revisions2plantes": {
+    "title": "REVISIONS 2 PLANTES",
+    "subtitle": "Projet individuel - janvier 2024",
+    "technology": "VueJS",
+    "description1": "Créé pour les apprenants du CFA Maraichage du Lycée de Montravel (42) afin de les aider dans les révisions pour leur diplome, le site propose des fiches de révisions sur les adventices, les plantes ornementales ainsi que les indésirables.",
+    "description2": "Deux modes de révisions sont disponibles, un mode \"flashcards\" et un mode \"quiz\" avec calcul du score total.",
+    "link": "https://revisions2plantes.vercel.app/",
+    "githubLink": "https://github.com/Renaud-CCI/revisions2plantes"
   }
 }

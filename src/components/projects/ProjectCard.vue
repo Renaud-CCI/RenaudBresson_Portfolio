@@ -73,6 +73,7 @@ import phpZooIMG from '@/assets/images/projects/phpZoo.png';
 import puissance4IMG from '@/assets/images/projects/puissance4.png';
 import simpsonsFightIMG from '@/assets/images/projects/simpsonsFight.png';
 import sunsetIMG from '@/assets/images/projects/sunset.png';
+import revisions2plantesIMG from '@/assets/images/projects/revisions2plantes.png';
 
 export default {
   name: 'ProjectCard',
@@ -106,6 +107,8 @@ export default {
           return simpsonsFightIMG;
         case 'formulotheque':
           return formulothequeIMG;
+        case 'revisions2plantes':
+          return revisions2plantesIMG; 
         default:
           return phpZooIMG;
       }
