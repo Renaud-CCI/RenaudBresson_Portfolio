@@ -60,7 +60,7 @@
     "subtitle": "Commande - Mars 2024",
     "technology": "Laravel / VueJS",
     "description1": "Site de commande de pains et viennoiseries pour un artisan tarnais. Les clients peuvent commander en ligne et le boulanger peut gérer les commandes et les différentes informations et/ou photos à afficher sur le site depuis son dashboard.",
-    "description2": "Des ingédients bio et locaux, des pains au levain naturel, une cuisson au feu de bois, de quoi vous régaler si vous habitez vers Albi !",
+    "description2": "Des ingédients bio et locaux, des pains au levain naturel, une cuisson au feu de bois. De quoi vous régaler si vous habitez vers Albi !",
     "link": "https://www.pepelaboulange.fr/",
     "githubLink": null
   }

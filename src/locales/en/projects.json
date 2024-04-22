@@ -54,5 +54,15 @@
     "description2": "Two revision modes are available, a \"flashcards\" mode and a \"quiz\" mode with total score calculation.",
     "link": "https://revisions2plantes.vercel.app/",
     "githubLink": "https://github.com/Renaud-CCI/revisions2plantes"
+  },
+  "pepelaboulange": {
+    "title": "PEPE LA BOULANGE",
+    "subtitle": "Order - March 2024",
+    "technology": "Laravel / VueJS",
+    "description1": "Online ordering website for a baker in Tarn. Customers can order online, and the baker can manage orders and various information and/or photos to display on the site from their dashboard.",
+    "description2": "Organic and local ingredients, naturally leavened bread, wood-fired baking. A treat for those living near Albi!",
+    "link": "https://www.pepelaboulange.fr/",
+    "githubLink": null
   }
+
 }
