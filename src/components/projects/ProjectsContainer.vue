@@ -81,7 +81,7 @@ export default {
       autoPlaying: true,
       internalAutoPlaying: true,
       slides: [
-          'revisions2plantes', 'formulotheque', 'simpsonsFight', 'puissance4', 'sunset', 'phpZoo'
+          'pepelaboulange', 'revisions2plantes', 'formulotheque', 'simpsonsFight', 'puissance4', 'phpZoo'
         ]
     }
   },

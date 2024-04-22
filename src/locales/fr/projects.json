@@ -54,5 +54,14 @@
     "description2": "Deux modes de révisions sont disponibles, un mode \"flashcards\" et un mode \"quiz\" avec calcul du score total.",
     "link": "https://revisions2plantes.vercel.app/",
     "githubLink": "https://github.com/Renaud-CCI/revisions2plantes"
+  },
+  "pepelaboulange": {
+    "title": "PEPE LA BOULANGE",
+    "subtitle": "Commande - Mars 2024",
+    "technology": "Laravel / VueJS",
+    "description1": "Site de commande de pains et viennoiseries pour un artisan tarnais. Les clients peuvent commander en ligne et le boulanger peut gérer les commandes et les différentes informations et/ou photos à afficher sur le site depuis son dashboard.",
+    "description2": "Des ingédients bio et locaux, des pains au levain naturel, une cuisson au feu de bois, de quoi vous régaler si vous habitez vers Albi !",
+    "link": "https://www.pepelaboulange.fr/",
+    "githubLink": null
   }
 }
